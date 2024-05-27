@@ -114,6 +114,10 @@ where
         self.text.height()
     }
 
+    pub fn update_text(&mut self, new_text: impl Into<Text<'text>>) {
+        self.text = new_text.into();
+    }
+    
     /// Add a child to the `TreeItem`.
     ///
     /// # Errors
